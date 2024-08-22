@@ -3,9 +3,7 @@ import time
 
 physicsClient = p.connect(p.GUI)
 
-p.configureDebugVisualizer(p.COV_ENABLE_GUI, 0)
-
-for i in range(1000):
+for i in range(10000):
     p.stepSimulation()
     time.sleep(1/60)
     print(f"Iteration: {i}")
