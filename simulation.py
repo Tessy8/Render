@@ -9,6 +9,7 @@ import constants as c
 from world import WORLD
 from robot import ROBOT
 
+
 class SIMULATION:
 
 	def __init__(self):
@@ -28,6 +29,7 @@ class SIMULATION:
 		for i in range(c.rangeValue):
 			p.stepSimulation()
 			self.robot.Sense(i)
+			self.robot.Think()
 			self.robot.Act(i)
 			time.sleep(1/20)
 		
