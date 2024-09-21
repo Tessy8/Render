@@ -38,7 +38,8 @@ class NEURAL_NETWORK:
 
             else:
 
-                self.neurons[neuronName].Update_Hidden_Or_Motor_Neuron()
+                self.neurons[neuronName].Update_Hidden_Or_Motor_Neuron(self.neurons, self.synapses)
+
 
 # ---------------- Private methods --------------------------------------
 
@@ -56,7 +57,9 @@ class NEURAL_NETWORK:
 
         targetNeuronName = synapse.Get_Target_Neuron_Name()
 
-        self.synapses[sourceNeuronName , targetNeuronName] = synapse
+        synapseWeight = synapse.Get_Weight()
+
+        self.synapses[sourceNeuronName , targetNeuronName, synapseWeight] = synapse
 
     def Digest(self,line):
 
