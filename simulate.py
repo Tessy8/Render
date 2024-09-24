@@ -1,9 +1,13 @@
 from simulation import SIMULATION
 import constants as c
+import sys
+import os
 
-simulation = SIMULATION()
+directorGUI = sys.argv[1]
+
+simulation = SIMULATION(directorGUI)
 simulation.Run()
-
+simulation.Get_Fitness()
 
 
 '''
