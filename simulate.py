@@ -4,8 +4,9 @@ import sys
 import os
 
 directorGUI = sys.argv[1]
+solutionID = sys.argv[2]
 
-simulation = SIMULATION(directorGUI)
+simulation = SIMULATION(directorGUI, solutionID)
 simulation.Run()
 simulation.Get_Fitness()
 

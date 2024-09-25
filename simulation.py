@@ -12,7 +12,7 @@ from robot import ROBOT
 
 class SIMULATION:
 
-	def __init__(self, directorGUI):
+	def __init__(self, directorGUI, solutionID):
 		self.directorGUI = directorGUI
 		if directorGUI == "DIRECT":
 			self.physicsClient = p.connect(p.DIRECT)
@@ -23,10 +23,8 @@ class SIMULATION:
 
 		p.setGravity(0,0,-9.8)
 
-		#pyrosim.Prepare_To_Simulate(robotId)
-
 		self.world = WORLD()
-		self.robot = ROBOT()
+		self.robot = ROBOT(solutionID)
 
 
 	def Run(self):
@@ -36,7 +34,7 @@ class SIMULATION:
 			self.robot.Think()
 			self.robot.Act(i)
 			if self.directorGUI == "GUI":
-				time.sleep(1/50)
+				time.sleep(1/500)
 
 	def Get_Fitness(self):
 		self.robot.Get_Fitness()

@@ -18,3 +18,4 @@ targetAnglesFrontLeg = amplitudeFrontLeg*numpy.sin(frequencyFrontLeg*numpy.linsp
 # numpy.save('data/targetAnglesFrontLeg.npy', numpy.array(targetAnglesFrontLeg))
 
 numberOfGenerations = 10
+populationSize = 10
